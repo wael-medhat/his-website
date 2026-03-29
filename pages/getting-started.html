@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Getting Started - HIS System</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo"><span class="logo-icon">🏥</span><span>HIS System</span></div>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="features.html">Features</a></li>
+                <li><a href="documentation.html">Documentation</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="breadcrumb mt-4">
+            <a href="../index.html">Home</a><span>/</span><span>Getting Started</span>
+        </div>
+
+        <section class="hero mt-5">
+            <div class="hero-content">
+                <h1>Getting Started with HIS</h1>
+                <p>Quick setup guide to get your Healthcare Information System up and running</p>
+            </div>
+        </section>
+
+        <section class="mt-5">
+            <h2>Prerequisites</h2>
+            <ul style="padding-left: 2rem;">
+                <li>Node.js 16+ and npm</li>
+                <li>PHP 8.0+</li>
+                <li>MySQL 8.0+</li>
+                <li>Git</li>
+            </ul>
+
+            <h2 class="mt-5">Installation Steps</h2>
+            
+            <h3>1. Clone Repository</h3>
+            <pre><code>git clone https://github.com/his-system/his-project.git
+cd his-project</code></pre>
+
+            <h3>2. Frontend Setup</h3>
+            <pre><code>cd frontend
+npm install
+npm run dev</code></pre>
+
+            <h3>3. Backend Setup</h3>
+            <pre><code>cd backend
+php -S localhost:8000 -t public</code></pre>
+
+            <h3>4. Database Setup</h3>
+            <pre><code>mysql -u root -p < database/schema.sql</code></pre>
+
+            <h3>5. Environment Configuration</h3>
+            <pre><code>cp .env.example .env
+# Edit .env with your configuration</code></pre>
+
+            <h2 class="mt-5">Demo Credentials</h2>
+            <p><strong>Email:</strong> admin@his.local</p>
+            <p><strong>Password:</strong> password123</p>
+
+            <h2 class="mt-5">Next Steps</h2>
+            <ul style="padding-left: 2rem;">
+                <li>Read the <a href="documentation.html">full documentation</a></li>
+                <li>Explore the <a href="api.html">API documentation</a></li>
+                <li>Review <a href="deployment.html">deployment options</a></li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section"><h3>🏥 HIS System</h3></div>
+            <div class="footer-section"><h3>Quick Links</h3><ul><li><a href="../index.html">Home</a></li></ul></div>
+            <div class="footer-section"><h3>Resources</h3><ul><li><a href="api.html">API</a></li></ul></div>
+            <div class="footer-section"><h3>Contact</h3><ul><li><a href="mailto:support@his-system.local">support@his-system.local</a></li></ul></div>
+        </div>
+        <div class="footer-bottom"><p>&copy; 2024 Healthcare Information System.</p></div>
+    </footer>
+
+    <script src="../assets/js/main.js"></script>
+</body>
+</html>

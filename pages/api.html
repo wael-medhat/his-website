@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API Documentation - HIS System</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo"><span class="logo-icon">🏥</span><span>HIS System</span></div>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="features.html">Features</a></li>
+                <li><a href="documentation.html">Documentation</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="breadcrumb mt-4">
+            <a href="../index.html">Home</a><span>/</span><span>API Documentation</span>
+        </div>
+
+        <section class="hero mt-5">
+            <div class="hero-content">
+                <h1>API Documentation</h1>
+                <p>Complete reference for HIS System REST API</p>
+            </div>
+        </section>
+
+        <section class="mt-5">
+            <h2>Authentication Endpoints</h2>
+            <div class="card">
+                <h4>POST /api/auth/login</h4>
+                <p>User login with email and password</p>
+                <pre><code>curl -X POST http://localhost:8000/api/auth/login \
+  -H "Content-Type: application/json" \
+  -d '{"email":"admin@his.local","password":"password123"}'</code></pre>
+            </div>
+
+            <h2 class="mt-5">Patient Endpoints</h2>
+            <div class="card">
+                <h4>GET /api/patients</h4>
+                <p>List all patients</p>
+                <pre><code>curl -X GET http://localhost:8000/api/patients \
+  -H "Authorization: Bearer YOUR_TOKEN"</code></pre>
+            </div>
+
+            <h2 class="mt-5">Appointment Endpoints</h2>
+            <div class="card">
+                <h4>GET /api/appointments</h4>
+                <p>List all appointments</p>
+                <pre><code>curl -X GET http://localhost:8000/api/appointments \
+  -H "Authorization: Bearer YOUR_TOKEN"</code></pre>
+            </div>
+
+            <div class="alert alert-info mt-5">
+                <strong>Note:</strong> All API endpoints require JWT authentication. Include the token in the Authorization header.
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section"><h3>🏥 HIS System</h3></div>
+            <div class="footer-section"><h3>Quick Links</h3><ul><li><a href="../index.html">Home</a></li></ul></div>
+            <div class="footer-section"><h3>Resources</h3><ul><li><a href="deployment.html">Deployment</a></li></ul></div>
+            <div class="footer-section"><h3>Contact</h3><ul><li><a href="mailto:support@his-system.local">support@his-system.local</a></li></ul></div>
+        </div>
+        <div class="footer-bottom"><p>&copy; 2024 Healthcare Information System.</p></div>
+    </footer>
+
+    <script src="../assets/js/main.js"></script>
+</body>
+</html>

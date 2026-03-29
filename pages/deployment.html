@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deployment Guide - HIS System</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo"><span class="logo-icon">🏥</span><span>HIS System</span></div>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="features.html">Features</a></li>
+                <li><a href="documentation.html">Documentation</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="breadcrumb mt-4">
+            <a href="../index.html">Home</a><span>/</span><span>Deployment</span>
+        </div>
+
+        <section class="hero mt-5">
+            <div class="hero-content">
+                <h1>Deployment Guide</h1>
+                <p>Deploy HIS System to production environments</p>
+            </div>
+        </section>
+
+        <section class="mt-5">
+            <h2>Deployment Options</h2>
+            
+            <h3>Docker Deployment</h3>
+            <pre><code>docker build -t his-system .
+docker run -p 3000:3000 -p 8000:8000 his-system</code></pre>
+
+            <h3>Nginx Configuration</h3>
+            <pre><code>server {
+    listen 80;
+    server_name his-system.com;
+    
+    location / {
+        proxy_pass http://localhost:3000;
+    }
+}</code></pre>
+
+            <h3>Apache Configuration</h3>
+            <pre><code>&lt;VirtualHost *:80&gt;
+    ServerName his-system.com
+    DocumentRoot /var/www/his-system
+&lt;/VirtualHost&gt;</code></pre>
+
+            <div class="alert alert-success mt-5">
+                <strong>Success!</strong> Your HIS System is ready for production deployment.
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section"><h3>🏥 HIS System</h3></div>
+            <div class="footer-section"><h3>Quick Links</h3><ul><li><a href="../index.html">Home</a></li></ul></div>
+            <div class="footer-section"><h3>Resources</h3><ul><li><a href="api.html">API</a></li></ul></div>
+            <div class="footer-section"><h3>Contact</h3><ul><li><a href="mailto:support@his-system.local">support@his-system.local</a></li></ul></div>
+        </div>
+        <div class="footer-bottom"><p>&copy; 2024 Healthcare Information System.</p></div>
+    </footer>
+
+    <script src="../assets/js/main.js"></script>
+</body>
+</html>
